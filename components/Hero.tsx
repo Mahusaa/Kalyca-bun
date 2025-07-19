@@ -1,15 +1,17 @@
+import Image from 'next/image'
+
 export default function Hero() {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
-        <img
+        <Image
           src="/kalyca-kids.jpg"
           alt="Kalyca Azzahra School Students"
-          className="w-full h-full object-cover md:object-cover object-center"
-          style={{
-            objectPosition: 'center 30%' // Adjust to show more of the image on mobile
-          }}
+          fill
+          priority
+          className="object-cover object-center w-full h-full"
+          style={{ objectPosition: 'center 30%' }}
         />
         {/* Overlay for better text readability */}
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/80 to-primary/70"></div>

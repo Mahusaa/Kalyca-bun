@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 const reviews = [
   {
     name: "Aisyah Nurul",
@@ -31,13 +33,16 @@ export default function Review() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {reviews.map((review, idx) => (
             <div key={idx} className="bg-secondary-50 rounded-2xl shadow-lg p-8 flex flex-col items-center">
-              <img
+              <Image
                 src={review.image}
                 alt={review.name}
+                width={96}
+                height={96}
                 className="w-24 h-24 rounded-full object-cover mb-4 border-4 border-primary"
+                priority={idx === 0}
               />
               <h4 className="font-heading font-semibold text-primary text-lg mb-2">{review.name}</h4>
-              <p className="text-primary/80 text-center">"{review.testimonial}"</p>
+              <p className="text-primary/80 text-center">&quot;{review.testimonial}&quot;</p>
             </div>
           ))}
         </div>

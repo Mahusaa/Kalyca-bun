@@ -17,13 +17,6 @@ export default function Footer() {
     "Program Beasiswa"
   ];
 
-  const contactInfo = [
-    "Jl. Raya Depok No. 123",
-    "Depok, West Java 16415",
-    "+62 812-3456-7890",
-    "info@kalycaazzahra.sch.id"
-  ];
-
   return (
     <footer className="bg-primary text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
