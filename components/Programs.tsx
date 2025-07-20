@@ -68,7 +68,7 @@ export default function Programs() {
       description: "Meningkatkan kebugaran dan kepercayaan diri"
     },
     {
-      name: "Musik",
+      name: "Musik & Band",
       icon: "🎵",
       description: "Mengembangkan kreativitas dan apresiasi seni"
     },

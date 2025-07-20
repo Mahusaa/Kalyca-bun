@@ -3,7 +3,7 @@ import { useState } from "react";
 
 const facilityImages = [
   '/mini_zoo.webp', // Mini Zoo
-  '/kebun_sekolah_optimized_700.webp', // Kebun Sekolah
+  '/holistik_optimized_700.webp', // Kebun Sekolah
   '/kolam_renang_1_optimized_700.webp', // Kolam Renang
   '/perpustakaan.webp', // Perpustakaan
   '/lapangan_olahraga_optimized_700.webp', // Lapangan Olahraga

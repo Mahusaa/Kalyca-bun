@@ -12,7 +12,9 @@ const extracurricularImages = [
   '/google_musik_optimized_700.webp', // Musik
   '/techclub-ezgif.com-jpg-to-webp-converter.webp', // Tech Club
   '/tahfidzquran.webp', // Tahfidz Quran
-  '/seni_dan_kerajinan.webp', // Seni & Kerajinan
+  '/golf.webp', // Golf
+  '/lapangan_olahraga_optimized_700.webp', // Soccer
+  '/main background.webp', // Dan banyak lagi
 ];
 
 export default function Extracurricular({ extracurriculars }: ExtracurricularProps) {
@@ -27,7 +29,27 @@ export default function Extracurricular({ extracurriculars }: ExtracurricularPro
         </p>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-        {extracurriculars.map((activity, index) => (
+        {[
+          ...extracurriculars.map((activity, idx) =>
+            idx === 5
+              ? {
+                  name: 'Golf',
+                  icon: '⛳',
+                  description: 'Belajar teknik dasar dan bermain golf di area sekolah',
+                }
+              : activity
+          ),
+          {
+            name: 'Soccer',
+            icon: '⚽',
+            description: 'Latihan dan pertandingan sepak bola di lapangan olahraga sekolah',
+          },
+          {
+            name: 'Dan Banyak Lagi',
+            icon: '✨',
+            description: 'Masih banyak aktivitas seru lainnya untuk pengembangan bakat siswa',
+          },
+        ].map((activity, index) => (
           <div
             key={index}
             className="relative rounded-xl overflow-hidden text-center shadow-lg hover:shadow-xl transition-shadow duration-300 group"
@@ -54,4 +76,4 @@ export default function Extracurricular({ extracurriculars }: ExtracurricularPro
       </div>
     </section>
   );
-} 
+}
