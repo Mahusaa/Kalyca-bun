@@ -1,7 +1,7 @@
 const aboutImages = {
-  mission: 'https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=600&q=80',
-  vision: 'https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80',
-  school: 'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=600&q=80',
+  mission: '/misi kami.webp',
+  vision: '/visi_kami.webp',
+  school: '/pendidikan holistik.webp',
 };
 
 export default function AboutUs() {

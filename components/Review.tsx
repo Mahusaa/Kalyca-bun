@@ -3,17 +3,17 @@ import Image from 'next/image'
 const reviews = [
   {
     name: "Aisyah Nurul",
-    image: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=400&q=80",
+    image: "/empati_optimized_700.webp",
     testimonial: "Saya sangat senang belajar di sekolah ini. Guru-gurunya baik dan saya bisa belajar Al-Quran dengan mudah!"
   },
   {
     name: "Muhammad Fadhlan",
-    image: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80",
+    image: "/holistik_optimized_700.webp",
     testimonial: "Teman-teman di sini ramah dan banyak kegiatan seru, seperti panahan dan tahfidz Quran."
   },
   {
     name: "Siti Zahra",
-    image: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=400&q=80",
+    image: "/inklusif_optimized_700.webp",
     testimonial: "Sekolah ini membuat saya lebih percaya diri dan saya suka belajar bersama teman-teman."
   }
 ];

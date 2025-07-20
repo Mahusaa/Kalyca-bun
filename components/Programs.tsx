@@ -3,9 +3,9 @@ import { useState } from "react";
 import Extracurricular from "@/components/Extracurricular";
 
 const programImages = [
-  'https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=600&q=80',
-  'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=600&q=80',
-  'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80',
+  '/early_years_optimized_700.webp', // Early Years (Preschool)
+  '/primary.webp', // Primary (SD)
+  '/secondary_optimized.webp', // Secondary (SMP)
 ];
 
 
@@ -99,9 +99,7 @@ export default function Programs() {
           <h2 className="font-heading font-bold text-4xl md:text-5xl text-primary mb-6">
             Program Pendidikan
           </h2>
-          <p className="text-xl text-primary/80 max-w-3xl mx-auto">
-            Program pendidikan komprehensif dari usia dini hingga menengah dengan pendekatan Montessori yang terintegrasi teknologi
-          </p>
+          <p className="text-xl text-primary/80 max-w-3xl mx-auto">Program pendidikan komprehensif dari usia dini hingga menengah dengan pendekatan <span className="font-extrabold">Islamic montessori</span> yang mengutamakan kebahagiaan anak dan pengembangan karakter</p>
         </div>
 
         {/* Main Programs Slider */}
@@ -239,11 +237,10 @@ export default function Programs() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                   </svg>
                 </div>
-                <h4 className="font-heading font-semibold text-primary text-xl">Pendidikan Inklusif</h4>
+                <h4 className="font-heading font-semibold text-primary text-xl">Program Tumbuh Bahagia</h4>
               </div>
               <p className="text-primary/80 leading-relaxed">
-                Program khusus untuk anak berkebutuhan khusus dengan pendekatan individual
-                dan dukungan tenaga ahli yang berpengalaman.
+                Program Tumbuh Bahagia adalah ruang belajar yang ramah untuk anak-anak, fokus pada pengembangan karakter, potensi, dan
               </p>
             </div>
 

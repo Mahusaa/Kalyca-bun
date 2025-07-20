@@ -2,14 +2,14 @@
 import { useState } from "react";
 
 const facilityImages = [
-  'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80',
-  'https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80',
-  'https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=600&q=80',
-  'https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=600&q=80',
-  'https://images.unsplash.com/photo-1505843279827-4b522fae12b2?auto=format&fit=crop&w=600&q=80',
-  'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80',
-  'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80',
-  'https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=600&q=80',
+  '/mini_zoo.webp', // Mini Zoo
+  '/kebun_sekolah_optimized_700.webp', // Kebun Sekolah
+  '/kolam_renang_1_optimized_700.webp', // Kolam Renang
+  '/perpustakaan.webp', // Perpustakaan
+  '/lapangan_olahraga_optimized_700.webp', // Lapangan Olahraga
+  '/lab_komputer_optimized_700.webp', // Lab Komputer
+  '/ruang_seni.webp', // Ruang Seni
+  '/musholla.webp', // Musholla
 ];
 
 export default function Facilities() {
@@ -78,6 +78,15 @@ export default function Facilities() {
 
   const handlePrev = () => setCurrent((prev) => (prev === 0 ? facilities.length - 1 : prev - 1));
   const handleNext = () => setCurrent((prev) => (prev === facilities.length - 1 ? 0 : prev + 1));
+
+  const featureLabels: Record<string, string> = {
+    'Ruang kelas ber-AC dan nyaman': 'Ruang AC',
+    'CCTV untuk keamanan 24 jam': 'CCTV',
+    'Ruang UKS dengan tenaga medis': 'Ruang UKS',
+    'Parkir luas untuk kendaraan': 'Parkir Luas',
+    'WiFi gratis di seluruh area': 'WiFi Gratis',
+    'Taman bermain yang aman': 'Taman Bermain',
+  }
 
   return (
     <section id="facilities" className="py-20 bg-white">
@@ -222,7 +231,7 @@ export default function Facilities() {
                   </svg>
                 </div>
                 <span className="text-primary/80 text-sm font-semibold mb-0.5">
-                  {feature.split(' ')[0]}
+                  {featureLabels[feature] || feature.split(' ').slice(0, 2).join(' ')}
                 </span>
                 <span className="text-primary/70 text-xs">
                   {feature}

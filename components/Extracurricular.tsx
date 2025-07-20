@@ -7,12 +7,12 @@ interface ExtracurricularProps {
 }
 
 const extracurricularImages = [
-  'https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=600&q=80',
-  'https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=600&q=80',
-  'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=600&q=80',
-  'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80',
-  'https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80',
-  'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80',
+  '/google_panahan_optimized_700.webp', // Panahan
+  '/berenang_optimized_700.webp', // Berenang
+  '/google_musik_optimized_700.webp', // Musik
+  '/techclub-ezgif.com-jpg-to-webp-converter.webp', // Tech Club
+  '/tahfidzquran.webp', // Tahfidz Quran
+  '/seni_dan_kerajinan.webp', // Seni & Kerajinan
 ];
 
 export default function Extracurricular({ extracurriculars }: ExtracurricularProps) {
