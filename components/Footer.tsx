@@ -64,7 +64,7 @@ export default function Footer() {
             <div className="flex space-x-4">
               {socialMedia.map((social, idx) => (
                 <a
-                  key={social.name}
+                  key={`${social.name}+${idx}`}
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
