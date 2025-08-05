@@ -47,10 +47,12 @@ export default function Hero() {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center lg:justify-start">
               <a
-                href="#admission"
+                href="https://wa.me/6287775465406?text=Halo%20ini%20ingin%20bertanya..."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group bg-highlight text-primary px-6 md:px-8 py-3 md:py-4 rounded-xl hover:bg-yellow-300 transition-all duration-300 font-medium text-base md:text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center space-x-2"
               >
-                <span>Daftar Sekarang</span>
+                <span>Hubungi WhatsApp</span>
                 <svg className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>

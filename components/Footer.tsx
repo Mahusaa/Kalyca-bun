@@ -1,4 +1,5 @@
 "use client"
+import Image from 'next/image'
 export default function Footer() {
   const quickLinks = [
     { name: "Beranda", href: "#home" },
@@ -17,6 +18,24 @@ export default function Footer() {
     "Program Beasiswa"
   ];
 
+  const socialMedia = [
+    {
+      name: "Instagram",
+      icon: "📷",
+      url: "https://www.instagram.com/kalyca.azzahra"
+    },
+    {
+      name: "YouTube",
+      icon: "📺",
+      url: "https://youtube.com/@kalycaazzahraschool?si=iaOGn8qmO1-0JxUq"
+    },
+    {
+      name: "WhatsApp",
+      icon: "💬",
+      url: "https://wa.me/6287775465406?text=Halo%20ini%20ingin%20bertanya..."
+    }
+  ];
+
   return (
     <footer className="bg-primary text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -24,8 +43,14 @@ export default function Footer() {
           {/* School Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-12 h-12 bg-highlight rounded-lg flex items-center justify-center">
-                <span className="text-primary font-heading font-bold text-xl">K</span>
+              <div className="w-12 h-12 relative">
+                <Image
+                  src="/logo-kalyca-azzahra.png"
+                  alt="Kalyca Azzahra School Logo"
+                  fill
+                  className="object-contain"
+                  priority
+                />
               </div>
               <div>
                 <h3 className="font-heading font-bold text-2xl">Kalyca Azzahra</h3>
@@ -37,15 +62,18 @@ export default function Footer() {
               yang berempati, tangguh, dan berpikiran global dari usia dini hingga menengah.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 bg-secondary-200 rounded-lg flex items-center justify-center hover:bg-secondary-300 transition-colors duration-200">
-                <span className="text-primary text-lg">📷</span>
-              </a>
-              <a href="#" className="w-10 h-10 bg-secondary-200 rounded-lg flex items-center justify-center hover:bg-secondary-300 transition-colors duration-200">
-                <span className="text-primary text-lg">🎵</span>
-              </a>
-              <a href="#" className="w-10 h-10 bg-secondary-200 rounded-lg flex items-center justify-center hover:bg-secondary-300 transition-colors duration-200">
-                <span className="text-primary text-lg">📘</span>
-              </a>
+              {socialMedia.map((social, idx) => (
+                <a
+                  key={social.name}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-secondary-200 rounded-lg flex items-center justify-center hover:bg-secondary-300 transition-colors duration-200"
+                  aria-label={social.name}
+                >
+                  <span className="text-primary text-lg">{social.icon}</span>
+                </a>
+              ))}
             </div>
           </div>
 
@@ -80,24 +108,46 @@ export default function Footer() {
         </div>
 
         {/* Contact Info */}
-        <div className="border-t border-secondary-700 pt-8 mb-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="border-t border-secondary-700 pt-8 mb-8" id="contact">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div>
               <h5 className="font-heading font-semibold text-lg mb-4">Lokasi</h5>
-              <p className="text-secondary-300">Jl. Raya Depok No. 123<br />Depok, West Java 16415</p>
+              <a
+                href="https://www.google.com/maps?um=1&ie=UTF-8&fb=1&gl=id&sa=X&geocode=Kd1N-Tdl62kuMTjHhGqmE1J2&daddr=Jl.+Kapitan+1+No.177,+RT.+01+RW.+04,+Desa+Babakan,+Tapos,+Sukatani,+Depok,+Kota+Depok,+Jawa+Barat+16454"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-secondary-300 hover:text-white transition-colors duration-200 block"
+              >
+                Jl. Kapitan 1 No.177, RT. 01 RW. 04<br />Desa Babakan, Tapos, Sukatani, Depok<br />Kota Depok, Jawa Barat 16454
+              </a>
             </div>
             <div>
-              <h5 className="font-heading font-semibold text-lg mb-4">Telepon</h5>
-              <p className="text-secondary-300">+62 812-3456-7890<br />+62 812-3456-7891</p>
+              <h5 className="font-heading font-semibold text-lg mb-4">WhatsApp</h5>
+              <a
+                href="https://wa.me/6287775465406?text=Halo%20ini%20ingin%20bertanya..."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-secondary-300 hover:text-white transition-colors duration-200 block"
+              >
+                +62 877-7546-5406
+              </a>
             </div>
             <div>
               <h5 className="font-heading font-semibold text-lg mb-4">Email</h5>
-              <p className="text-secondary-300">info@kalycaazzahra.sch.id<br />admission@kalycaazzahra.sch.id</p>
+              <a
+                href="mailto:info@kalycaazzahra.sch.id"
+                className="text-secondary-300 hover:text-white transition-colors duration-200 block"
+              >
+                info@kalycaazzahra.sch.id
+              </a>
+              <a
+                href="mailto:admission@kalycaazzahra.sch.id"
+                className="text-secondary-300 hover:text-white transition-colors duration-200 block"
+              >
+                admission@kalycaazzahra.sch.id
+              </a>
             </div>
-            <div>
-              <h5 className="font-heading font-semibold text-lg mb-4">Jam Operasional</h5>
-              <p className="text-secondary-300">Senin - Jumat: 07:00 - 16:00<br />Sabtu: 08:00 - 12:00</p>
-            </div>
+
           </div>
         </div>
 

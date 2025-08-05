@@ -11,10 +11,9 @@ export default function Contact() {
     },
     {
       icon: "📞",
-      title: "Telepon",
+      title: "WhatsApp",
       details: [
-        "+62 812-3456-7890",
-        "+62 812-3456-7891"
+        "+62 877-7546-5406"
       ]
     },
     {
@@ -41,19 +40,22 @@ export default function Contact() {
       name: "Instagram",
       handle: "@kalyca.azzahra",
       icon: "📷",
-      color: "bg-gradient-to-r from-purple-500 to-pink-500"
+      color: "bg-gradient-to-r from-purple-500 to-pink-500",
+      url: "https://www.instagram.com/kalyca.azzahra"
     },
     {
-      name: "TikTok",
-      handle: "@kalyca.azzahra",
-      icon: "🎵",
-      color: "bg-gradient-to-r from-pink-500 to-red-500"
+      name: "YouTube",
+      handle: "@kalycaazzahraschool",
+      icon: "📺",
+      color: "bg-gradient-to-r from-red-500 to-red-600",
+      url: "https://youtube.com/@kalycaazzahraschool?si=iaOGn8qmO1-0JxUq"
     },
     {
-      name: "Facebook",
-      handle: "@kalyca.azzahra",
-      icon: "📘",
-      color: "bg-gradient-to-r from-blue-500 to-blue-600"
+      name: "WhatsApp",
+      handle: "+62 877-7546-5406",
+      icon: "💬",
+      color: "bg-gradient-to-r from-green-500 to-green-600",
+      url: "https://wa.me/6287775465406?text=Halo%20ini%20ingin%20bertanya..."
     }
   ];
 
@@ -106,7 +108,9 @@ export default function Contact() {
                 {socialMedia.map((social, index) => (
                   <a
                     key={index}
-                    href="#"
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={`${social.color} text-white rounded-xl p-4 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1`}
                   >
                     <div className="text-2xl mb-2">{social.icon}</div>

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,7 +15,7 @@ export default function Navigation() {
     { name: "Fasilitas", href: "/#facilities" },
     { name: "Testimoni", href: "/#review" },
     { name: "Pendaftaran", href: "/admission" },
-    { name: "Kontak", href: "/contact" },
+    { name: "Kontak", href: "/#contact" },
   ];
 
   return (
@@ -22,9 +23,15 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-white font-heading font-bold text-lg">K</span>
+          <Link href="/" className="flex items-center space-x-3">
+            <div className="w-12 h-12 relative">
+              <Image
+                src="/logo-kalyca-azzahra.png"
+                alt="Kalyca Azzahra School Logo"
+                fill
+                className="object-contain"
+                priority
+              />
             </div>
             <div>
               <h1 className="font-heading font-bold text-primary text-lg">Kalyca Azzahra</h1>
@@ -43,12 +50,14 @@ export default function Navigation() {
                 {item.name}
               </Link>
             ))}
-            <Link
-              href="#contact"
+            <a
+              href="https://wa.me/6287775465406?text=Halo%20ini%20ingin%20bertanya..."
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-primary text-white px-6 py-2 rounded-lg hover:bg-primary-600 transition-colors duration-200 font-medium"
             >
               Hubungi Kami
-            </Link>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -95,13 +104,15 @@ export default function Navigation() {
                   {item.name}
                 </Link>
               ))}
-              <Link
-                href="#contact"
+              <a
+                href="https://wa.me/6287775465406?text=Halo%20ini%20ingin%20bertanya..."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="block mt-4 mx-3 bg-primary text-white px-6 py-2 rounded-lg hover:bg-primary-600 transition-colors duration-200 font-medium text-center"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Hubungi Kami
-              </Link>
+              </a>
             </div>
           </div>
         )}
