@@ -7,7 +7,7 @@ import { Poppins, Open_Sans } from "next/font/google";
 
 export const metadata: Metadata = {
   title: "Kalyca Azzahra School - Everyone Deserves a Good Education",
-  description: "Inclusive Montessori school in Depok, West Java offering preschool to secondary education with technology integration, bilingual programs, and holistic character development.",
+  description: "Sekolah Islam Montessori di Depok dengan konsep Sekolah Alam, bilingual, Islami, aktif, kreatif, dan siap bekali anak keterampilan abad 21.",
   keywords: "Montessori school, inclusive education, Depok, West Java, bilingual education, technology integration, special needs, affordable education",
   authors: [{ name: "Kalyca Azzahra School" }],
   openGraph: {

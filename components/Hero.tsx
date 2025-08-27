@@ -35,8 +35,7 @@ export default function Hero() {
             {/* Description - Shorter on mobile */}
             <p className="text-base sm:text-lg md:text-xl text-white/90 leading-relaxed max-w-2xl mx-auto lg:mx-0">
               <span className="hidden md:inline">
-                Sekolah inklusif Montessori yang mengintegrasikan teknologi untuk membentuk individu
-                yang berempati, tangguh, dan berpikiran global dari usia dini hingga menengah.
+                Sekolah Islam Montessori di Depok dengan konsep Sekolah Alam Kebun. Menggabungkan kurikulum nasional dan Montessori Islam, menghadirkan pembelajaran Islami, bilingual, aktif, dan berbasis proyek. Lingkungan aman, nyaman, dan menyenangkan untuk menumbuhkan anak cerdas, kreatif, dan berakhlak mulia.
               </span>
               <span className="md:hidden">
                 Sekolah inklusif Montessori dengan teknologi untuk membentuk individu

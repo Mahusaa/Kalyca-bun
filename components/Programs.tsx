@@ -14,80 +14,52 @@ export default function Programs() {
   const programs = [
     {
       title: "Early Years (Preschool)",
-      age: "2-6 tahun",
-      description: "Program pendidikan usia dini yang mengembangkan fondasi belajar melalui pendekatan Montessori yang menyenangkan dan inklusif.",
+      age: "3-6 tahun",
+      description: "Program pendidikan usia dini yang memperkenalkan anak pada dunia sekolah dalam lingkungan Islami yang menyenangkan.",
       features: [
-        "Pembelajaran berbasis bermain",
-        "Pengembangan motorik halus dan kasar",
-        "Pengenalan bahasa Indonesia dan Inggris",
-        "Aktivitas sensorial Montessori",
-        "Pengembangan keterampilan sosial"
+        "Kiddie Club (3-4 tahun) - Pengantar Bahasa Indonesia",
+        "Kindergarten A & B (4-6 tahun) - Islamic Montessori School",
+        "Stimulasi motorik dan sensorik",
+        "Pengamatan alam ringan",
+        "Bermain aktif & kolaboratif",
+        "Pembelajaran holistik melalui pengalaman sehari-hari"
       ],
       icon: "👶",
       color: "bg-secondary-100"
     },
     {
-      title: "Primary (SD)",
-      age: "Kelas 1-6",
-      description: "Pendidikan dasar yang mengintegrasikan kurikulum nasional dengan pendekatan Montessori dan teknologi untuk pembelajaran yang efektif.",
+      title: "Primary Years (SD)",
+      age: "Kelas 1-6 (6-12 tahun)",
+      description: "Sekolah Alam-Kebun Islami di Depok yang menstimulasi belajar aktif dan pengalaman langsung.",
       features: [
-        "Kurikulum nasional terintegrasi Montessori",
-        "Program bilingual intensif",
-        "Integrasi teknologi dalam pembelajaran",
-        "Pengembangan karakter dan akhlak",
-        "Aktivitas ekstrakurikuler beragam"
+        "Pengamatan alam dan lingkungan sekitar",
+        "Belajar aktif & kolaboratif (Active & Collaborative Learning)",
+        "Pembelajaran holistik dan terpadu",
+        "Pembelajaran bermakna & fungsional praktis",
+        "Keteladanan dan prinsip keterampilan hidup",
+        "Pembelajaran yang menyenangkan dan kreatif"
       ],
       icon: "🎒",
       color: "bg-primary/10"
     },
     {
-      title: "Secondary (SMP)",
-      age: "Kelas 7-9",
-      description: "Pendidikan menengah yang mempersiapkan siswa untuk jenjang pendidikan selanjutnya dengan fokus pada pengembangan potensi unik setiap individu.",
+      title: "Secondary Years (SMP)",
+      age: "Kelas 7-9 (12-15 tahun)",
+      description: "Sekolah Islam SMP Depok yang mengembangkan iman, karakter Islami, dan keterampilan abad 21.",
       features: [
-        "Kurikulum nasional dengan pengayaan",
-        "Program STEM dan teknologi",
-        "Pengembangan leadership dan soft skills",
-        "Persiapan ujian nasional",
-        "Bimbingan karir dan minat bakat"
+        "Pembelajaran holistik dan terpadu",
+        "Pengembangan kemampuan sains, teknologi, dan seni",
+        "Keterampilan berpikir kritis dan kreatif",
+        "Keterampilan kolaboratif & komunikasi",
+        "Prinsip pemerolehan keterampilan hidup",
+        "Pembentukan karakter Islami yang kuat"
       ],
       icon: "🎓",
       color: "bg-accent/10"
     }
   ];
 
-  const extracurriculars = [
-    {
-      name: "Panahan",
-      icon: "🏹",
-      description: "Mengembangkan fokus, ketepatan, dan disiplin"
-    },
-    {
-      name: "Berenang",
-      icon: "🏊‍♂️",
-      description: "Meningkatkan kebugaran dan kepercayaan diri"
-    },
-    {
-      name: "Musik & Band",
-      icon: "🎵",
-      description: "Mengembangkan kreativitas dan apresiasi seni"
-    },
-    {
-      name: "Tech Club",
-      icon: "💻",
-      description: "Mengasah kemampuan teknologi dan coding"
-    },
-    {
-      name: "Tahfidz Quran",
-      icon: "📖",
-      description: "Menghafal Al-Quran dengan metode yang efektif"
-    },
-    {
-      name: "Seni & Kerajinan",
-      icon: "🎨",
-      description: "Mengembangkan kreativitas dan keterampilan tangan"
-    }
-  ];
+
 
   const handlePrev = () => setCurrent((prev) => (prev === 0 ? programs.length - 1 : prev - 1));
   const handleNext = () => setCurrent((prev) => (prev === programs.length - 1 ? 0 : prev + 1));
@@ -222,7 +194,7 @@ export default function Programs() {
         </div>
 
         {/* Extracurricular Activities */}
-        <Extracurricular extracurriculars={extracurriculars} />
+        <Extracurricular />
 
         {/* Special Programs */}
         <div className="mt-20 bg-primary/5 rounded-2xl p-8">
