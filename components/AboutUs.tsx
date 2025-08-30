@@ -40,7 +40,7 @@ export default function AboutUs() {
                 </div>
                 <div className="text-white/90 leading-relaxed space-y-3">
                   <p>
-                    Menanamkan keimanan dan Ketaqwaan kepada Tuhan YME melalui Ajaran Agama Islam yang Rahmatan Lil 'Alamin.
+                    Menanamkan keimanan dan Ketaqwaan kepada Tuhan YME melalui Ajaran Agama Islam yang Rahmatan Lil Alamin.
                   </p>
                   <p>
                     Mengembangkan bidang Ilmu Pengetahuan, Teknologi dan Seni berdasarkan minat, bakat dan potensi peserta didik.
@@ -72,7 +72,7 @@ export default function AboutUs() {
                   <h3 className="font-heading font-bold text-2xl text-white">Visi Kami</h3>
                 </div>
                 <p className="text-white/90 leading-relaxed">
-                  Menjadi tempat pendidikan terbaik bagi anak-anak untuk mengembangkan diri, membangun karakter, 
+                  Menjadi tempat pendidikan terbaik bagi anak-anak untuk mengembangkan diri, membangun karakter,
                   menemukan minat dan bakat, dalam suasana kekeluargaan dan kebahagiaan.
                 </p>
               </div>
