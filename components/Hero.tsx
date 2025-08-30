@@ -25,10 +25,7 @@ export default function Hero() {
           <div className="text-center lg:text-left space-y-6 md:space-y-8 text-white">
             <div className="space-y-3 md:space-y-4">
               <h1 className="font-heading font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white leading-tight">
-                Kalyca Azzahra
-                <span className="block text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-highlight font-medium mt-1 md:mt-2">
-                  School
-                </span>
+                Kalyca Azzahra School
               </h1>
             </div>
 
@@ -121,8 +118,11 @@ export default function Hero() {
             <div className="absolute -top-4 -right-4 bg-white rounded-xl p-4 shadow-lg">
               <div className="text-center">
                 <div className="text-2xl mb-2">🏆</div>
-                <p className="text-primary font-bold text-sm">Terakreditasi A</p>
-                <p className="text-primary/60 text-xs">Kualitas Terjamin</p>
+                <p className="text-primary font-bold text-sm">B Unggul</p>
+                <div className="mt-2 space-y-1">
+                  <p className="text-primary/70 text-xs">School with Wall</p>
+                  <p className="text-primary/70 text-xs">School Without Wall</p>
+                </div>
               </div>
             </div>
           </div>

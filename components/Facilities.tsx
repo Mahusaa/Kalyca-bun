@@ -52,23 +52,23 @@ export default function Facilities() {
       features: ["Komputer terbaru", "Software pendidikan", "Internet cepat"]
     },
     {
-      name: "Ruang Seni",
-      description: "Studio seni untuk mengembangkan kreativitas siswa",
-      icon: "🎨",
-      features: ["Alat lukis lengkap", "Area pameran", "Kelas musik"]
+      name: "Ruang Musik",
+      description: "Fasilitas yang digunakan untuk kegiatan pembelajaran dan latihan musik, dan sebagai bagian dari pengembangan seni dan keterampilan siswa",
+      icon: "🎵",
+      features: ["Instrumen Musik", "Peredam Suara (Soundproofing)", "Sound system"]
     },
     {
       name: "Musholla",
-      description: "Tempat ibadah yang nyaman untuk kegiatan keagamaan",
+      description: "Fasilitas ibadah yang disediakan di lingkungan sekolah untuk digunakan oleh siswa, guru, dan staf dalam melaksanakan shalat, mengaji, atau kegiatan keagamaan lainnya.",
       icon: "🕌",
-      features: ["Kapasitas besar", "Suasana tenang", "Program tahfidz"]
+      features: [" Tempat wudhu", "Rak AlQuran & Karpet", "Pengeras suara & Kipas angin"]
     }
   ];
 
   const additionalFeatures = [
     "Ruang kelas ber-AC dan nyaman",
     "CCTV untuk keamanan 24 jam",
-    "Kantin sehat dengan menu bergizi",
+    "Kantin sehat dengan menu bergizi(Planning)",
     "Ruang UKS dengan tenaga medis",
     "Parkir luas untuk kendaraan",
     "WiFi gratis di seluruh area",

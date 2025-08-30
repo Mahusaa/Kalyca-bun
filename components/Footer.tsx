@@ -135,16 +135,10 @@ export default function Footer() {
             <div>
               <h5 className="font-heading font-semibold text-lg mb-4">Email</h5>
               <a
-                href="mailto:info@kalycaazzahra.sch.id"
+                href="mailto:kazzahrapusaka@gmail.com"
                 className="text-secondary-300 hover:text-white transition-colors duration-200 block"
               >
-                info@kalycaazzahra.sch.id
-              </a>
-              <a
-                href="mailto:admission@kalycaazzahra.sch.id"
-                className="text-secondary-300 hover:text-white transition-colors duration-200 block"
-              >
-                admission@kalycaazzahra.sch.id
+                kazzahrapusaka@gmail.com
               </a>
             </div>
 

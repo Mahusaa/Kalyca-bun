@@ -13,7 +13,7 @@ export default function AboutUs() {
             Tentang Kami
           </h2>
           <p className="text-xl text-primary/80 max-w-3xl mx-auto">
-            Membentuk masa depan pendidikan yang inklusif dan holistik untuk setiap anak
+            Building Moslems Generation
           </p>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
@@ -38,11 +38,17 @@ export default function AboutUs() {
                   </div>
                   <h3 className="font-heading font-bold text-2xl text-white">Misi Kami</h3>
                 </div>
-                <p className="text-white/90 leading-relaxed">
-                  Menyediakan pendidikan inklusif, holistik, dan berpusat pada siswa yang mengembangkan 
-                  karakter, kreativitas, dan kemampuan akademik melalui pendekatan Montessori yang 
-                  terintegrasi dengan teknologi modern.
-                </p>
+                <div className="text-white/90 leading-relaxed space-y-3">
+                  <p>
+                    Menanamkan keimanan dan Ketaqwaan kepada Tuhan YME melalui Ajaran Agama Islam yang Rahmatan Lil 'Alamin.
+                  </p>
+                  <p>
+                    Mengembangkan bidang Ilmu Pengetahuan, Teknologi dan Seni berdasarkan minat, bakat dan potensi peserta didik.
+                  </p>
+                  <p>
+                    Mengembangkan karakter diri, kewirausahaan, kepemimpinan kemandirian melalui pembiasaan dengan pendekatan Montessori Islam.
+                  </p>
+                </div>
               </div>
             </div>
             <div
@@ -66,9 +72,8 @@ export default function AboutUs() {
                   <h3 className="font-heading font-bold text-2xl text-white">Visi Kami</h3>
                 </div>
                 <p className="text-white/90 leading-relaxed">
-                  Membentuk individu yang berempati, tangguh, dan berpikiran global yang siap 
-                  menghadapi tantangan masa depan dengan kepercayaan diri dan kemampuan 
-                  problem-solving yang unggul.
+                  Menjadi tempat pendidikan terbaik bagi anak-anak untuk mengembangkan diri, membangun karakter, 
+                  menemukan minat dan bakat, dalam suasana kekeluargaan dan kebahagiaan.
                 </p>
               </div>
             </div>
@@ -95,7 +100,7 @@ export default function AboutUs() {
                   Pendidikan Holistik
                 </h4>
                 <p className="text-white/80">
-                  Mengembangkan aspek akademik, sosial, emosional, dan spiritual
+                  Pembelajaran secara Holistik dan terkait
                 </p>
               </div>
             </div>

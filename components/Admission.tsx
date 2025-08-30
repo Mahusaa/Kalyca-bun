@@ -1,67 +1,16 @@
-export default function Admission() {
-  const admissionSteps = [
-    {
-      step: "01",
-      title: "Konsultasi",
-      description: "Konsultasi dengan tim admission untuk memahami program dan kebutuhan anak"
-    },
-    {
-      step: "02",
-      title: "Pendaftaran",
-      description: "Mengisi formulir pendaftaran dan menyiapkan dokumen yang diperlukan"
-    },
-    {
-      step: "03",
-      title: "Observasi",
-      description: "Observasi kemampuan dan kesiapan anak untuk menentukan program yang tepat"
-    },
-    {
-      step: "04",
-      title: "Wawancara",
-      description: "Wawancara dengan orang tua dan anak untuk memahami ekspektasi dan tujuan"
-    },
-    {
-      step: "05",
-      title: "Pengumuman",
-      description: "Pengumuman hasil seleksi dan informasi selanjutnya"
-    },
-    {
-      step: "06",
-      title: "Daftar Ulang",
-      description: "Pembayaran biaya pendaftaran dan persiapan masuk sekolah"
-    }
-  ];
+import { admissionProcess } from "@/app/admission/data";
 
+export default function Admission() {
   const requiredDocuments = [
     "Akta kelahiran (fotokopi)",
-    "Kartu keluarga (fotokopi)",
-    "Pas foto 3x4 (2 lembar)",
-    "Surat keterangan sehat dari dokter",
-    "Rapor/transkrip nilai (untuk pindahan)",
-    "Surat pindah (untuk pindahan)",
-    "Fotokopi ijazah (untuk pindahan)"
+    "Pas foto 3x4 background merah (3 lembar)",
+    "Pas foto 4x6 background merah (2 lembar)",
+    "Rapor/transkrip nilai",
+    "Fotokopi KTP kedua orang tua",
+    "Fotokopi Kartu keluarga ",
+    "Fotokopi ijazah",
   ];
 
-  const feeInfo = [
-    {
-      level: "Early Years (Preschool)",
-      registration: "Rp 500.000",
-      monthly: "Rp 800.000 - 1.200.000",
-      note: "Biaya dapat dinegosiasikan"
-    },
-    {
-      level: "Primary (SD)",
-      registration: "Rp 750.000",
-      monthly: "Rp 1.000.000 - 1.500.000",
-      note: "Beasiswa tersedia untuk anak yatim"
-    },
-    {
-      level: "Secondary (SMP)",
-      registration: "Rp 1.000.000",
-      monthly: "Rp 1.200.000 - 1.800.000",
-      note: "Program beasiswa khusus tersedia"
-    }
-  ];
 
   return (
     <section id="admission" className="py-20 bg-secondary-50">
@@ -81,11 +30,11 @@ export default function Admission() {
             Proses Pendaftaran
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {admissionSteps.map((step, index) => (
+            {admissionProcess.map((step, index) => (
               <div key={index} className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mr-4">
-                    <span className="text-white font-heading font-bold text-lg">{step.step}</span>
+                    <span className="text-white font-heading font-bold text-lg">{`0${index + 1}`}</span>
                   </div>
                   <h4 className="font-heading font-semibold text-primary text-xl">
                     {step.title}
@@ -96,75 +45,6 @@ export default function Admission() {
                 </p>
               </div>
             ))}
-          </div>
-        </div>
-
-        {/* Fee Information */}
-        <div className="mb-20">
-          <h3 className="font-heading font-bold text-3xl text-primary text-center mb-12">
-            Informasi Biaya Pendidikan
-          </h3>
-          <div className="bg-white rounded-2xl p-8 shadow-lg">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {feeInfo.map((fee, index) => (
-                <div key={index} className="text-center">
-                  <h4 className="font-heading font-semibold text-primary text-xl mb-4">
-                    {fee.level}
-                  </h4>
-                  <div className="space-y-3">
-                    <div className="bg-secondary-50 rounded-lg p-4">
-                      <p className="text-primary/70 text-sm mb-1">Biaya Pendaftaran</p>
-                      <p className="font-heading font-bold text-primary text-lg">{fee.registration}</p>
-                    </div>
-                    <div className="bg-accent/10 rounded-lg p-4">
-                      <p className="text-primary/70 text-sm mb-1">SPP Bulanan</p>
-                      <p className="font-heading font-bold text-accent text-lg">{fee.monthly}</p>
-                    </div>
-                    <p className="text-primary/60 text-sm italic">{fee.note}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-8 p-6 bg-highlight/20 rounded-xl">
-              <h4 className="font-heading font-semibold text-primary text-lg mb-3 text-center">
-                💡 Informasi Penting
-              </h4>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-primary/80">
-                <div className="flex items-start space-x-2">
-                  <div className="w-5 h-5 bg-highlight rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <svg className="w-3 h-3 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <span>Biaya dapat dinegosiasikan sesuai kemampuan ekonomi keluarga</span>
-                </div>
-                <div className="flex items-start space-x-2">
-                  <div className="w-5 h-5 bg-highlight rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <svg className="w-3 h-3 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <span>Beasiswa penuh tersedia untuk anak yatim dan keluarga kurang mampu</span>
-                </div>
-                <div className="flex items-start space-x-2">
-                  <div className="w-5 h-5 bg-highlight rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <svg className="w-3 h-3 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <span>Biaya sudah termasuk seragam, buku pelajaran, dan ekstrakurikuler</span>
-                </div>
-                <div className="flex items-start space-x-2">
-                  <div className="w-5 h-5 bg-highlight rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <svg className="w-3 h-3 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <span>Pembayaran dapat dilakukan secara bertahap atau cicilan</span>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
 
