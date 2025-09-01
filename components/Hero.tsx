@@ -69,47 +69,47 @@ export default function Hero() {
           {/* Right Content - Feature Cards - Hidden on mobile to reduce scrolling */}
           <div className="relative hidden lg:block">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {/* Feature Card 1 */}
+              {/* Feature Card 1 - Religius */}
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                 <div className="w-12 h-12 bg-highlight rounded-xl flex items-center justify-center mb-4">
-                  <span className="text-primary text-xl">🌱</span>
+                  <span className="text-primary text-xl">🕌</span>
                 </div>
-                <h3 className="font-heading font-bold text-white text-lg mb-2">Montessori</h3>
+                <h3 className="font-heading font-bold text-white text-lg mb-2">Religius</h3>
                 <p className="text-white/80 text-sm leading-relaxed">
-                  Pendekatan pembelajaran yang berpusat pada anak
+                  Membangun karakter sesuai nilai-nilai Islam yang menjadi landasan moral dan spiritual
                 </p>
               </div>
 
-              {/* Feature Card 2 */}
+              {/* Feature Card 2 - Islamic Montessori School */}
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                 <div className="w-12 h-12 bg-accent rounded-xl flex items-center justify-center mb-4">
-                  <span className="text-white text-xl">💻</span>
+                  <span className="text-white text-xl">🏠</span>
                 </div>
-                <h3 className="font-heading font-bold text-white text-lg mb-2">Teknologi</h3>
+                <h3 className="font-heading font-bold text-white text-lg mb-2">Islamic Montessori School</h3>
                 <p className="text-white/80 text-sm leading-relaxed">
-                  Integrasi teknologi dalam pembelajaran
+                  Menggabungkan metode Montessori dengan nilai-nilai Islami dalam pembelajaran yang menyenangkan
                 </p>
               </div>
 
-              {/* Feature Card 3 */}
+              {/* Feature Card 3 - Tanpa Buku & PR */}
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                 <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mb-4">
-                  <span className="text-white text-xl">❤️</span>
+                  <span className="text-white text-xl">📚</span>
                 </div>
-                <h3 className="font-heading font-bold text-white text-lg mb-2">Inklusif</h3>
+                <h3 className="font-heading font-bold text-white text-lg mb-2">Tanpa Buku & PR</h3>
                 <p className="text-white/80 text-sm leading-relaxed">
-                  Pendidikan untuk semua anak
+                  Fokus pada pengalaman belajar langsung dan eksplorasi yang bermakna
                 </p>
               </div>
 
-              {/* Feature Card 4 */}
+              {/* Feature Card 4 - Project-Based Learning */}
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                 <div className="w-12 h-12 bg-highlight rounded-xl flex items-center justify-center mb-4">
                   <span className="text-primary text-xl">🎯</span>
                 </div>
-                <h3 className="font-heading font-bold text-white text-lg mb-2">Holistik</h3>
+                <h3 className="font-heading font-bold text-white text-lg mb-2">Project-Based Learning</h3>
                 <p className="text-white/80 text-sm leading-relaxed">
-                  Pengembangan menyeluruh
+                  Belajar melalui proyek kreatif dan nyata yang mengembangkan keterampilan praktis
                 </p>
               </div>
             </div>
@@ -134,27 +134,27 @@ export default function Hero() {
             <div className="grid grid-cols-2 gap-3">
               <div className="flex items-center space-x-2">
                 <div className="w-6 h-6 bg-highlight rounded-lg flex items-center justify-center">
-                  <span className="text-primary text-xs">✓</span>
+                  <span className="text-primary text-xs">🕌</span>
                 </div>
-                <span className="text-white/90 text-xs">Pendidikan Inklusif</span>
+                <span className="text-white/90 text-xs">Religius</span>
               </div>
               <div className="flex items-center space-x-2">
                 <div className="w-6 h-6 bg-highlight rounded-lg flex items-center justify-center">
-                  <span className="text-primary text-xs">✓</span>
+                  <span className="text-primary text-xs">🏠</span>
                 </div>
-                <span className="text-white/90 text-xs">Beasiswa Yatim</span>
+                <span className="text-white/90 text-xs">Islamic Montessori</span>
               </div>
               <div className="flex items-center space-x-2">
                 <div className="w-6 h-6 bg-highlight rounded-lg flex items-center justify-center">
-                  <span className="text-primary text-xs">✓</span>
+                  <span className="text-primary text-xs">📚</span>
                 </div>
-                <span className="text-white/90 text-xs">Fasilitas Lengkap</span>
+                <span className="text-white/90 text-xs">Tanpa Buku & PR</span>
               </div>
               <div className="flex items-center space-x-2">
                 <div className="w-6 h-6 bg-highlight rounded-lg flex items-center justify-center">
-                  <span className="text-primary text-xs">✓</span>
+                  <span className="text-primary text-xs">🎯</span>
                 </div>
-                <span className="text-white/90 text-xs">Biaya Terjangkau</span>
+                <span className="text-white/90 text-xs">Project-Based Learning</span>
               </div>
             </div>
           </div>
