@@ -35,7 +35,7 @@ export default function Navigation() {
             </div>
             <div>
               <h1 className="font-heading font-bold text-primary text-lg lg:text-xl">Kalyca Azzahra</h1>
-              <p className="text-xs lg:text-sm text-accent">Everyone Deserves a Good Education</p>
+              <p className="text-xs lg:text-sm text-accent">Building Moslems Generation</p>
             </div>
           </Link>
 
