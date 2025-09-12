@@ -5,16 +5,20 @@ export default function Hero() {
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
+
         <Image
-          src="/kalyca-kids.jpg"
+          src="/kalyca-hero.png"
           alt="Kalyca Azzahra School Students"
           fill
           priority
-          className="object-cover object-center w-full h-full"
-          style={{ objectPosition: 'center 30%' }}
+          className="
+    object-cover w-full h-full
+    md:object-[center_10%] // mulai dari md ke atas → normal tengah
+  "
         />
+
         {/* Overlay for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/80 to-primary/70"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/60 via-primary/80 to-primary/70"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent"></div>
       </div>
 
@@ -67,11 +71,11 @@ export default function Hero() {
           </div>
 
           {/* Right Content - Feature Cards - Hidden on mobile to reduce scrolling */}
-          <div className="relative hidden lg:block">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="relative hidden lg:block mt-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
               {/* Feature Card 1 - Religius */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="w-12 h-12 bg-highlight rounded-xl flex items-center justify-center mb-4">
+              <div className="bg-white/10 backdrop-blur-none rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="w-12 h-12 bg-highlight rounded-xl flex items-center justify-center mb-2">
                   <span className="text-primary text-xl">🕌</span>
                 </div>
                 <h3 className="font-heading font-bold text-white text-lg mb-2">Religius</h3>
@@ -81,8 +85,8 @@ export default function Hero() {
               </div>
 
               {/* Feature Card 2 - Islamic Montessori School */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="w-12 h-12 bg-accent rounded-xl flex items-center justify-center mb-4">
+              <div className="bg-white/10 backdrop-blur-none rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="w-12 h-12 bg-accent rounded-xl flex items-center justify-center mb-2">
                   <span className="text-white text-xl">🏠</span>
                 </div>
                 <h3 className="font-heading font-bold text-white text-lg mb-2">Islamic Montessori School</h3>
@@ -92,7 +96,7 @@ export default function Hero() {
               </div>
 
               {/* Feature Card 3 - Tanpa Buku & PR */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+              <div className="bg-white/10 backdrop-blur-none rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                 <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mb-4">
                   <span className="text-white text-xl">📚</span>
                 </div>
@@ -103,7 +107,7 @@ export default function Hero() {
               </div>
 
               {/* Feature Card 4 - Project-Based Learning */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+              <div className="bg-white/10 backdrop-blur-none rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                 <div className="w-12 h-12 bg-highlight rounded-xl flex items-center justify-center mb-4">
                   <span className="text-primary text-xl">🎯</span>
                 </div>
@@ -111,18 +115,6 @@ export default function Hero() {
                 <p className="text-white/80 text-sm leading-relaxed">
                   Belajar melalui proyek kreatif dan nyata yang mengembangkan keterampilan praktis
                 </p>
-              </div>
-            </div>
-
-            {/* Floating Achievement Badge */}
-            <div className="absolute -top-4 -right-4 bg-white rounded-xl p-4 shadow-lg">
-              <div className="text-center">
-                <div className="text-2xl mb-2">🏆</div>
-                <p className="text-primary font-bold text-sm">B Unggul</p>
-                <div className="mt-2 space-y-1">
-                  <p className="text-primary/70 text-xs">School with Wall</p>
-                  <p className="text-primary/70 text-xs">School Without Wall</p>
-                </div>
               </div>
             </div>
           </div>

@@ -1,5 +1,6 @@
 "use client"
 import { useState } from "react";
+import { CheckCircle, Shield, BookOpen, Users } from "lucide-react";
 
 const facilityImages = [
   '/mini_zoo.webp', // Mini Zoo
@@ -256,61 +257,71 @@ export default function Facilities() {
 
         {/* Facility Highlights */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {/* Left Content */}
           <div className="space-y-6">
             <h3 className="font-heading font-bold text-3xl text-primary">
-              Mengapa Memilih Fasilitas Kami?
+              Mengapa Memilih <span className="text-accent">Kalyca</span> untuk Anak Anda?
             </h3>
-            <div className="space-y-4">
+
+            <div className="space-y-6">
+              {/* Item 1 */}
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-highlight rounded-lg flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
+                <div className="w-12 h-12 bg-highlight rounded-xl flex items-center justify-center flex-shrink-0 shadow-md">
+                  <CheckCircle className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h4 className="font-heading font-semibold text-primary text-lg mb-2">Lengkap & Modern</h4>
-                  <p className="text-primary/80">Semua fasilitas didesain dengan standar modern untuk mendukung pembelajaran optimal.</p>
+                  <h4 className="font-heading font-semibold text-lg text-primary mb-1">
+                    Pendidikan Islami dengan Sentuhan Montessori
+                  </h4>
+                  <p className="text-primary/80">
+                    Menggabungkan kurikulum nasional dengan metode Montessori Islam untuk menumbuhkan anak cerdas, beriman, dan berakhlak mulia.
+                  </p>
                 </div>
               </div>
 
+              {/* Item 2 */}
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                  </svg>
+                <div className="w-12 h-12 bg-accent rounded-xl flex items-center justify-center flex-shrink-0 shadow-md">
+                  <Shield className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h4 className="font-heading font-semibold text-primary text-lg mb-2">Aman & Terjaga</h4>
-                  <p className="text-primary/80">Sistem keamanan 24 jam dengan CCTV dan petugas keamanan yang siap siaga.</p>
+                  <h4 className="font-heading font-semibold text-lg text-primary mb-1">
+                    Lingkungan Nyaman & Aman
+                  </h4>
+                  <p className="text-primary/80">
+                    Suasana sekolah alam yang asri, Islami, bebas bullying, dengan fasilitas lengkap serta pengawasan keamanan 24 jam.
+                  </p>
                 </div>
               </div>
 
+              {/* Item 3 */}
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                  </svg>
+                <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center flex-shrink-0 shadow-md">
+                  <BookOpen className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h4 className="font-heading font-semibold text-primary text-lg mb-2">Ramah Lingkungan</h4>
-                  <p className="text-primary/80">Fasilitas yang didesain dengan mempertimbangkan kelestarian lingkungan.</p>
+                  <h4 className="font-heading font-semibold text-lg text-primary mb-1">
+                    Bilingual & Berbasis Proyek
+                  </h4>
+                  <p className="text-primary/80">
+                    Anak terbiasa berbahasa Inggris sejak dini melalui pembelajaran aktif, kolaboratif, dan berbasis pengalaman nyata.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-secondary-100 to-secondary-200 rounded-2xl p-8 flex items-center justify-center">
+          {/* Right Featured Bubble */}
+          <div className="bg-gradient-to-br from-secondary-100 to-secondary-200 rounded-2xl p-10 flex items-center justify-center shadow-lg">
             <div className="text-center">
-              <div className="w-32 h-32 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg className="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                </svg>
+              <div className="w-28 h-28 bg-primary rounded-full flex items-center justify-center mx-auto mb-6 shadow-md">
+                <Users className="w-14 h-14 text-white" />
               </div>
-              <h4 className="font-heading font-semibold text-primary text-xl mb-2">
-                Fasilitas Terpadu
+              <h4 className="font-heading font-semibold text-xl text-primary mb-2">
+                Guru Profesional & Berpengalaman
               </h4>
-              <p className="text-primary/70">
-                Semua fasilitas terintegrasi untuk mendukung pembelajaran holistik dan pengembangan karakter siswa
+              <p className="text-primary/70 max-w-xs mx-auto">
+                Tenaga pendidik ramah, kompeten, dan berdedikasi mendampingi anak dengan teladan terbaik di setiap proses pembelajaran.
               </p>
             </div>
           </div>
