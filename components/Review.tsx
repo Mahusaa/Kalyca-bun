@@ -1,7 +1,3 @@
-"use client";
-import { useState } from "react";
-import { Play, Pause } from "lucide-react";
-
 type VideoPlayerProps = {
   videoId: string;
   name: string;
