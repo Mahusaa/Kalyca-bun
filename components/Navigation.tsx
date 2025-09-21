@@ -15,7 +15,6 @@ export default function Navigation() {
     { name: "Fasilitas", href: "/#facilities" },
     { name: "Testimoni", href: "/#review" },
     { name: "Pendaftaran", href: "/admission" },
-    { name: "Kontak", href: "/#contact" },
   ];
 
   return (

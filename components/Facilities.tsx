@@ -1,6 +1,6 @@
 "use client"
 import { useState } from "react";
-import { CheckCircle, Shield, BookOpen, Users } from "lucide-react";
+import { CheckCircle, Shield, BookOpen, Users, Heart, Building } from "lucide-react";
 
 const facilityImages = [
   '/mini_zoo.webp', // Mini Zoo
@@ -256,13 +256,12 @@ export default function Facilities() {
         </div>
 
         {/* Facility Highlights */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Left Content */}
-          <div className="space-y-6">
-            <h3 className="font-heading font-bold text-3xl text-primary">
-              Mengapa Memilih <span className="text-accent">Kalyca</span> untuk Anak Anda?
-            </h3>
-
+        <div>
+          <h3 className="font-heading font-bold text-3xl text-primary text-center mb-12">
+            Mengapa Memilih <span className="text-accent">Kalyca</span> untuk anak anda?
+          </h3>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Left Column */}
             <div className="space-y-6">
               {/* Item 1 */}
               <div className="flex items-start space-x-4">
@@ -271,10 +270,10 @@ export default function Facilities() {
                 </div>
                 <div>
                   <h4 className="font-heading font-semibold text-lg text-primary mb-1">
-                    Pendidikan Islami dengan Sentuhan Montessori
+                    Pendidikan Montessori dengan Nilai Islam
                   </h4>
                   <p className="text-primary/80">
-                    Menggabungkan kurikulum nasional dengan metode Montessori Islam untuk menumbuhkan anak cerdas, beriman, dan berakhlak mulia.
+                    Menggabungkan pendekatan Montessori dan kurikulum nasional berbasis Islam untuk menumbuhkan anak yang cerdas, mandiri, dan berakhlak mulia.
                   </p>
                 </div>
               </div>
@@ -286,10 +285,10 @@ export default function Facilities() {
                 </div>
                 <div>
                   <h4 className="font-heading font-semibold text-lg text-primary mb-1">
-                    Lingkungan Nyaman & Aman
+                    Lingkungan Belajar Nyaman & Aman
                   </h4>
                   <p className="text-primary/80">
-                    Suasana sekolah alam yang asri, Islami, bebas bullying, dengan fasilitas lengkap serta pengawasan keamanan 24 jam.
+                    Konsep Sekolah Alam Kebun yang asri, Islami, bebas bullying, dan mendukung tumbuh kembang anak secara optimal.
                   </p>
                 </div>
               </div>
@@ -301,28 +300,61 @@ export default function Facilities() {
                 </div>
                 <div>
                   <h4 className="font-heading font-semibold text-lg text-primary mb-1">
-                    Bilingual & Berbasis Proyek
+                    Pembelajaran Bilingual & Berbasis Proyek
                   </h4>
                   <p className="text-primary/80">
-                    Anak terbiasa berbahasa Inggris sejak dini melalui pembelajaran aktif, kolaboratif, dan berbasis pengalaman nyata.
+                    Anak dibiasakan berbahasa Inggris sejak dini melalui pembelajaran aktif, kolaboratif, dan berbasis pengalaman nyata.
                   </p>
                 </div>
               </div>
             </div>
-          </div>
 
-          {/* Right Featured Bubble */}
-          <div className="bg-gradient-to-br from-secondary-100 to-secondary-200 rounded-2xl p-10 flex items-center justify-center shadow-lg">
-            <div className="text-center">
-              <div className="w-28 h-28 bg-primary rounded-full flex items-center justify-center mx-auto mb-6 shadow-md">
-                <Users className="w-14 h-14 text-white" />
+            {/* Right Column */}
+            <div className="space-y-6">
+              {/* Item 4 */}
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-yellow-400 rounded-xl flex items-center justify-center flex-shrink-0 shadow-md">
+                  <Heart className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h4 className="font-heading font-semibold text-lg text-primary mb-1">
+                    Mengutamakan Kebahagiaan Anak
+                  </h4>
+                  <p className="text-primary/80">
+                    Setiap proses belajar dirancang menyenangkan agar anak tumbuh percaya diri, bahagia, dan mencintai proses belajar.
+                  </p>
+                </div>
               </div>
-              <h4 className="font-heading font-semibold text-xl text-primary mb-2">
-                Guru Profesional & Berpengalaman
-              </h4>
-              <p className="text-primary/70 max-w-xs mx-auto">
-                Tenaga pendidik ramah, kompeten, dan berdedikasi mendampingi anak dengan teladan terbaik di setiap proses pembelajaran.
-              </p>
+
+              {/* Item 5 */}
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow-md">
+                  <Building className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h4 className="font-heading font-semibold text-lg text-primary mb-1">
+                    Fasilitas Lengkap & Modern
+                  </h4>
+                  <p className="text-primary/80">
+                    Ruang kelas nyaman, area kebun luas, sarana olahraga, teknologi, serta lingkungan yang aman untuk eksplorasi anak.
+                  </p>
+                </div>
+              </div>
+
+              {/* Item 6 */}
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow-md">
+                  <Users className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h4 className="font-heading font-semibold text-lg text-primary mb-1">
+                    Guru Profesional & Teladan
+                  </h4>
+                  <p className="text-primary/80">
+                    Tenaga pendidik kompeten, ramah, dan berdedikasi memberikan bimbingan serta keteladanan terbaik bagi perkembangan anak.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
