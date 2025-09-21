@@ -1,5 +1,6 @@
 "use client"
 import Image from 'next/image'
+import { Instagram, Youtube, MessageCircleMore } from 'lucide-react';
 export default function Footer() {
   const quickLinks = [
     { name: "Beranda", href: "#home" },
@@ -21,17 +22,17 @@ export default function Footer() {
   const socialMedia = [
     {
       name: "Instagram",
-      icon: "📷",
+      icon: Instagram,
       url: "https://www.instagram.com/kalyca.azzahra"
     },
     {
       name: "YouTube",
-      icon: "📺",
+      icon: Youtube,
       url: "https://youtube.com/@kalycaazzahraschool?si=iaOGn8qmO1-0JxUq"
     },
     {
       name: "WhatsApp",
-      icon: "💬",
+      icon: MessageCircleMore,
       url: "https://wa.me/6287775465406?text=Halo%20ini%20ingin%20bertanya..."
     }
   ];
@@ -58,22 +59,24 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-secondary-300 mb-6 leading-relaxed">
-              Sekolah inklusif Montessori yang mengintegrasikan teknologi untuk membentuk individu
-              yang berempati, tangguh, dan berpikiran global dari usia dini hingga menengah.
+              Sekolah Islam Montessori di Depok dengan konsep Sekolah Alam Kebun. Menggabungkan kurikulum nasional dan Montessori Islam, menghadirkan pembelajaran Islami, bilingual, aktif, dan berbasis proyek. Lingkungan aman, nyaman, dan menyenangkan untuk menumbuhkan anak cerdas, kreatif, dan berakhlak mulia.
             </p>
             <div className="flex space-x-4">
-              {socialMedia.map((social, idx) => (
-                <a
-                  key={`${social.name}+${idx}`}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 bg-secondary-200 rounded-lg flex items-center justify-center hover:bg-secondary-300 transition-colors duration-200"
-                  aria-label={social.name}
-                >
-                  <span className="text-primary text-lg">{social.icon}</span>
-                </a>
-              ))}
+              {socialMedia.map((social, idx) => {
+                const Icon = social.icon; // alias for readability
+                return (
+                  <a
+                    key={`${social.name}+${idx}`}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 bg-secondary-200 rounded-lg flex items-center justify-center hover:bg-secondary-300 transition-colors duration-200"
+                    aria-label={social.name}
+                  >
+                    <Icon className="w-5 h-5 text-primary" />
+                  </a>
+                );
+              })}
             </div>
           </div>
 

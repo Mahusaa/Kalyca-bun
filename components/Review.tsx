@@ -40,7 +40,7 @@ function VideoPlayer({ videoId, name }: VideoPlayerProps) {
 
 export default function VideoTestimonials() {
   return (
-    <section className="py-20 bg-white">
+    <section id="review" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h3 className="font-heading font-bold text-3xl text-primary mb-6">
