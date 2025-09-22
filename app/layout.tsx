@@ -1,5 +1,6 @@
 import Footer from "@/components/Footer";
 import Navigation from "@/components/Navigation";
+import Script from "next/script";
 import "@/styles/globals.css";
 
 import { type Metadata } from "next";
@@ -36,6 +37,25 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="id" className={`${poppins.variable} ${openSans.variable}`}>
+      <head>
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-GMB0N6T9NG"
+          strategy="afterInteractive"
+        />
+        <Script
+          id="gtag-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-GMB0N6T9NG');
+            `,
+          }}
+        />
+      </head>
       <body className="font-sans antialiased">
         <Navigation />
         {children}
