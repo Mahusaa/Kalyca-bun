@@ -20,6 +20,9 @@ const nextConfig: NextConfig = {
     NEXT_PUBLIC_SITE_URL:
       process.env.NEXT_PUBLIC_SITE_URL ||
       "https://www.kalycaazzahra.com/ppdb-2027",
+    // Public identifier, loaded on every page from the root layout.
+    NEXT_PUBLIC_META_PIXEL_ID:
+      process.env.NEXT_PUBLIC_META_PIXEL_ID || "1660220602441913",
   },
 };
 

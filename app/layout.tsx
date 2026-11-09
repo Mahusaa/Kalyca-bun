@@ -1,4 +1,5 @@
 import Script from "next/script";
+import { TrackingScripts } from "@/features/ppdb/components/TrackingScripts";
 import "@/styles/globals.css";
 
 import { type Metadata } from "next";
@@ -53,7 +54,10 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="font-sans antialiased">{children}</body>
+      <body className="font-sans antialiased">
+        {children}
+        <TrackingScripts />
+      </body>
     </html>
   );
 }

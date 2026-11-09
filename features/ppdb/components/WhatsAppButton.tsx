@@ -3,6 +3,7 @@
 import { useEffect, useState, type MouseEvent, type ReactNode } from "react";
 import { getAttribution } from "../lib/attribution";
 import { trackWhatsAppClick } from "../lib/tracking";
+import { getVisitorCode } from "../lib/visitor";
 import { buildWhatsAppUrl, type CtaLocation } from "../lib/whatsapp";
 import { WhatsAppIcon } from "./BrandIcons";
 
@@ -50,16 +51,16 @@ export function WhatsAppButton({
   id,
   ariaLabel,
 }: WhatsAppButtonProps) {
-  // Server HTML gets the plain link; the browser adds UTM context after load.
+  // Server HTML gets the plain link; the browser adds UTM context and the visitor code after load.
   const [href, setHref] = useState(() => buildWhatsAppUrl(location));
 
   useEffect(() => {
-    setHref(buildWhatsAppUrl(location, getAttribution()));
+    setHref(buildWhatsAppUrl(location, getAttribution(), getVisitorCode()));
   }, [location]);
 
   const handleClick = (event: MouseEvent<HTMLAnchorElement>) => {
     const attribution = getAttribution();
-    event.currentTarget.href = buildWhatsAppUrl(location, attribution);
+    event.currentTarget.href = buildWhatsAppUrl(location, attribution, getVisitorCode());
     trackWhatsAppClick(location, attribution);
   };
 

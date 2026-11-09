@@ -2,7 +2,6 @@ import { Leaf } from "./components/BrandIcons";
 import { AttributionCapture, ReviewMode, ViewContentTracker } from "./components/ClientHelpers";
 import { SiteFooter, SiteHeader } from "./components/SiteChrome";
 import { StickyWhatsAppBar } from "./components/StickyWhatsAppBar";
-import { TrackingScripts } from "./components/TrackingScripts";
 import { isProductionContent, lpwaConfig } from "./config";
 import { content } from "./content";
 import { fontBody, fontDisplay } from "./fonts";
@@ -95,7 +94,6 @@ export default function PpdbLandingPage() {
 
       <StickyWhatsAppBar label={content.closing.cta.label} revealFromId="biaya" hideWhenVisibleId="penutup" />
 
-      <TrackingScripts />
       <AttributionCapture />
       {lpwaConfig.tracking.viewContent.enabled ? (
         <ViewContentTracker sectionId={lpwaConfig.tracking.viewContent.sectionId} />

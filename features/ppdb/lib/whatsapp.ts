@@ -25,8 +25,8 @@ function slug(value: string, max: number): string {
     .slice(0, max);
 }
 
-/** e.g. "PPDB27 · biaya · ig · ey-carousel-02" */
-export function buildReference(location: CtaLocation, attribution: Attribution = {}): string {
+/** e.g. "PPDB27 · biaya · ig · ey-carousel-02 · K7M2QX" */
+export function buildReference(location: CtaLocation, attribution: Attribution = {}, visitorCode = ""): string {
   const parts: string[] = [lpwaConfig.campaign.referenceCode, location];
   if (attribution.utm_source) {
     const source = attribution.utm_source.toLowerCase();
@@ -34,14 +34,15 @@ export function buildReference(location: CtaLocation, attribution: Attribution =
   }
   const adName = attribution.utm_content || attribution.utm_campaign;
   if (adName) parts.push(slug(adName, 32));
+  parts.push(visitorCode);
   return parts.filter(Boolean).join(" · ");
 }
 
 /** Official click-to-chat format: https://wa.me/<number>?text=<url-encoded message> */
-export function buildWhatsAppUrl(location: CtaLocation, attribution?: Attribution): string {
+export function buildWhatsAppUrl(location: CtaLocation, attribution?: Attribution, visitorCode?: string): string {
   const { number, message, appendReference } = lpwaConfig.whatsapp;
   const text = appendReference
-    ? `${message}\n\n(Ref: ${buildReference(location, attribution)})`
+    ? `${message}\n\n(Ref: ${buildReference(location, attribution, visitorCode)})`
     : message;
   return `https://wa.me/${number}?text=${encodeURIComponent(text)}`;
 }
