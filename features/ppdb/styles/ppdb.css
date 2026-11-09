@@ -1,0 +1,323 @@
+/*
+ * Kalyca PPDB landing page — design tokens and component styles.
+ * Imported once from the app's global stylesheet (Tailwind v4):
+ *   @import "tailwindcss";
+ *   @import "../features/ppdb/styles/ppdb.css";
+ *
+ * Brand: Kalyca Azzahra School Guideline 2025 (forest #102F17 · yellow #FAE824 · white).
+ * Visual direction: PPDB 2027/2028 posters & banners — sky-blue gradient, flying leaves,
+ * dark green cards with yellow text, heavy italic headlines with a yellow outline.
+ */
+
+@theme {
+  --color-forest-950: #0a2010;
+  --color-forest-900: #102f17; /* brand */
+  --color-forest-800: #173d20;
+  --color-forest-700: #1f4f2b;
+  --color-forest-600: #2c6639;
+  --color-forest-500: #2f7d43; /* Kalyca column, Keunggulan table (white text 5.1:1) */
+
+  --color-leaf-500: #4f9d2f;
+  --color-leaf-400: #7cbf45;
+  --color-leaf-100: #e6f3dc;
+  --color-leaf-50: #f2f9ec;
+
+  --color-sky-300: #a9d6ef;
+  --color-sky-200: #cbe7f6;
+  --color-sky-100: #e4f3fb;
+  --color-sky-50: #f3fafe;
+
+  --color-sage-500: #6b9171;
+  --color-sage-300: #a9c4ab;
+  --color-sage-100: #e3ece1;
+
+  --color-ink-900: #17231a;
+  --color-ink-700: #33423a;
+  --color-ink-500: #56665c;
+
+  --color-sun-400: #fae824; /* brand */
+  --color-sun-200: #fcf28f;
+  --color-sun-100: #fef9cf;
+
+  /* "Keunggulan Kalyca" table: dark neutral column for other schools. */
+  --color-charcoal-950: #1a1d1c;
+  --color-charcoal-900: #242826;
+  --color-charcoal-300: #b3bab5; /* on charcoal-900: 7.5:1 */
+
+  --color-alert-300: #ff8a8a; /* urgency text on dark green (contrast ≥ 4.5:1) */
+  --color-alert-600: #dc2626;
+
+  --color-amber-review: #d48a00;
+
+  --shadow-card: 0 1px 2px rgb(16 47 23 / 0.05), 0 14px 34px -16px rgb(16 47 23 / 0.22);
+  --shadow-float: 0 12px 32px -10px rgb(16 47 23 / 0.45);
+
+  --ease-soft: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+/* next/font sets these variables on the page wrapper, so map them inline. */
+@theme inline {
+  --font-display: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+  --font-body: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  .ppdb {
+    /* @theme inline does not emit these as CSS variables, but the rules below read them. */
+    --font-display: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+    --font-body: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+    font-family: var(--font-body);
+    color: var(--color-ink-700);
+    background-color: #fff;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    color-scheme: light;
+  }
+
+  .ppdb h1,
+  .ppdb h2,
+  .ppdb h3 {
+    font-family: var(--font-display);
+    color: var(--color-forest-900);
+    text-wrap: balance;
+  }
+
+  .ppdb p {
+    text-wrap: pretty;
+  }
+
+  .ppdb :focus-visible {
+    outline: 3px solid var(--color-forest-600);
+    outline-offset: 3px;
+    border-radius: 0.5rem;
+  }
+
+  .ppdb .on-dark :focus-visible {
+    outline-color: var(--color-sun-400);
+  }
+
+  .ppdb section[id] {
+    scroll-margin-top: 1rem;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html:has(.ppdb) {
+      scroll-behavior: smooth;
+    }
+  }
+}
+
+@layer components {
+  /* Poster-style headline: heavy italic caps, forest green with a yellow outline. */
+  .ppdb .display-title {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: -0.025em;
+    line-height: 0.98;
+    color: var(--color-forest-900);
+    -webkit-text-stroke: 0.2em var(--color-sun-400);
+    paint-order: stroke fill;
+    filter: drop-shadow(0 3px 0 rgb(255 255 255 / 0.9)) drop-shadow(0 12px 20px rgb(16 47 23 / 0.16));
+  }
+
+  /* Highlights: *kata* in content.ts. Headlines get a marker, body copy a yellow box (as in the posters). */
+  .ppdb .hl {
+    background-image: linear-gradient(
+      transparent 58%,
+      color-mix(in srgb, var(--color-sun-400) 90%, transparent) 58%,
+      color-mix(in srgb, var(--color-sun-400) 90%, transparent) 92%,
+      transparent 92%
+    );
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    padding-inline: 0.08em;
+    margin-inline: -0.08em;
+  }
+
+  .ppdb p .hl {
+    background: var(--color-sun-400);
+    color: var(--color-forest-950);
+    font-weight: 700;
+    border-radius: 0.2em;
+    padding: 0.02em 0.22em;
+    margin-inline: 0;
+  }
+
+  .ppdb .on-dark .hl {
+    background: none;
+    color: var(--color-sun-400);
+  }
+
+  /* Placeholder content (preview builds only — never rendered in production) */
+  .ppdb .ph {
+    color: var(--color-ink-500);
+    background-color: color-mix(in srgb, var(--color-sky-200) 45%, transparent);
+    border: 1.5px dashed var(--color-sky-300);
+    border-radius: 0.5rem;
+    padding: 0.05em 0.4em;
+    font-style: italic;
+  }
+
+  .ppdb .on-dark .ph {
+    color: color-mix(in srgb, white 80%, transparent);
+    background-color: rgb(255 255 255 / 0.06);
+    border-color: rgb(255 255 255 / 0.3);
+  }
+
+  /* Gentle fade in/out (small urgency accents). */
+  .ppdb .urgency-pulse {
+    animation: ppdb-urgency 2.4s ease-in-out infinite;
+  }
+
+  /* Early Bird "alarm" set — < 1 blink per second (photosensitivity-safe);
+     all motion is switched off for prefers-reduced-motion below. */
+  .ppdb .urgency-blink {
+    animation: ppdb-blink 1.15s ease-in-out infinite;
+  }
+
+  .ppdb .alarm-glow {
+    animation: ppdb-alarm-glow 1.15s ease-in-out infinite;
+  }
+
+  .ppdb .bell-ring {
+    transform-origin: 50% 10%;
+    animation: ppdb-bell 2.2s ease-in-out infinite;
+  }
+
+  /* Light sweep across a CTA button. */
+  .ppdb .cta-shine {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+  }
+
+  .ppdb .cta-shine::after {
+    content: "";
+    position: absolute;
+    inset: -20% auto -20% -60%;
+    width: 45%;
+    background: linear-gradient(100deg, transparent, rgb(255 255 255 / 0.75), transparent);
+    transform: skewX(-18deg);
+    animation: ppdb-shine 2.6s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .ppdb .photo-ph {
+    background-color: var(--color-sky-100);
+    background-image: repeating-linear-gradient(
+      -45deg,
+      transparent 0 14px,
+      rgb(16 47 23 / 0.035) 14px 28px
+    );
+  }
+}
+
+/* Review mode: add ?review=1 to the URL (preview builds) to outline content
+   that still needs Kalyca's confirmation. */
+[data-review="on"] .ppdb [data-status="unverified"] {
+  outline: 2px dashed var(--color-amber-review);
+  outline-offset: 3px;
+  border-radius: 0.375rem;
+}
+
+[data-review="on"] .ppdb [data-status="placeholder"] {
+  outline: 2px dashed #c2410c;
+  outline-offset: 3px;
+  border-radius: 0.375rem;
+}
+
+[data-review="on"] .ppdb [data-source]::after {
+  content: "Sumber: " attr(data-source);
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  margin-top: 0.4rem;
+  padding: 0.15rem 0.45rem;
+  border-radius: 0.35rem;
+  background: #fff4d6;
+  color: #7a4b00;
+  font: 600 10.5px/1.4 var(--font-body);
+  font-style: normal;
+  letter-spacing: 0;
+  text-transform: none;
+  -webkit-text-stroke: 0;
+}
+
+@keyframes ppdb-urgency {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.65; /* subtle; large bold text keeps ≥ 3:1 contrast at the dip */
+  }
+}
+
+@keyframes ppdb-blink {
+  0%,
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 14px rgb(255 99 99 / 0.95), 0 0 2px rgb(255 140 140 / 1);
+  }
+  50% {
+    opacity: 0.3;
+    text-shadow: none;
+  }
+}
+
+@keyframes ppdb-alarm-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 1px rgb(255 120 120 / 0.9), 0 0 26px rgb(255 70 70 / 0.55), inset 0 0 18px rgb(255 70 70 / 0.18);
+  }
+  50% {
+    box-shadow: 0 0 0 1px rgb(255 120 120 / 0.25), 0 0 0 rgb(255 70 70 / 0), inset 0 0 0 rgb(255 70 70 / 0);
+  }
+}
+
+@keyframes ppdb-bell {
+  0%,
+  45%,
+  100% {
+    transform: rotate(0);
+  }
+  5% {
+    transform: rotate(16deg);
+  }
+  12% {
+    transform: rotate(-14deg);
+  }
+  19% {
+    transform: rotate(10deg);
+  }
+  26% {
+    transform: rotate(-6deg);
+  }
+  33% {
+    transform: rotate(3deg);
+  }
+}
+
+@keyframes ppdb-shine {
+  0% {
+    left: -60%;
+  }
+  55%,
+  100% {
+    left: 130%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  /* Play every animation once, instantly, and rest on its final keyframe (no flicker). */
+  .ppdb *,
+  .ppdb *::before,
+  .ppdb *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

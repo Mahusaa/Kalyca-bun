@@ -1,5 +1,3 @@
-import Footer from "@/components/Footer";
-import Navigation from "@/components/Navigation";
 import Script from "next/script";
 import "@/styles/globals.css";
 
@@ -17,7 +15,6 @@ export const metadata: Metadata = {
     type: "website",
     locale: "id_ID",
   },
-  icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
 const poppins = Poppins({
@@ -56,11 +53,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="font-sans antialiased">
-        <Navigation />
-        {children}
-        <Footer />
-      </body>
+      <body className="font-sans antialiased">{children}</body>
     </html>
   );
 }

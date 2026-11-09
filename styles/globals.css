@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "../features/ppdb/styles/ppdb.css";
 
 @theme {
   --font-sans: var(--font-open-sans), ui-sans-serif, system-ui, sans-serif,

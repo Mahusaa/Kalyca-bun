@@ -1,4 +1,4 @@
-import { admissionProcess } from "@/app/admission/data";
+import { admissionProcess } from "@/app/(site)/admission/data";
 
 export default function Admission() {
   const requiredDocuments = [
