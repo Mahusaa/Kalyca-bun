@@ -62,7 +62,7 @@ const slots = {
   },
   curriculum: {
     ratio: "4 / 3",
-    alt: "Siswa belajar dengan alat peraga Montessori didampingi guru",
+    alt: "Siswa Kalyca belajar didampingi guru secara personal di kelas",
     brief: "Anak memakai alat peraga Montessori didampingi guru (close-up tangan + alat peraga juga bagus).",
   },
   "program-early": {

@@ -103,14 +103,14 @@
   },
   "collage-pool": {
     "width": 1600,
-    "height": 1067,
+    "height": 1658,
     "widths": [
       480,
       800,
       1200,
       1600
     ],
-    "blur": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAADwAwCdASoYABAAPu1iqU2ppaQiMAgBMB2JYgDE2CFJv7rR9ecK/zCAAP3MhVULYccmW1inh8E0XViEtwrQSz7G5jkFTBFFMLZVPTEXfoFVakJkfngUaiwiQZEsTTI4ly9WsT2DxKGUeyafVGnDaQOdQtCwoMvM/GnNhM633z9VHVimgujmBsskgMF3qRw6BtC6yLgA"
+    "blur": "data:image/webp;base64,UklGRtoAAABXRUJQVlA4IM4AAAAwBQCdASoYABkAPu1orlCppaQiqAqpMB2JZgC90Yx2US/fIgmggDqrVxucYSE/hdjZAAD90hH/CbTG3/8ULV1SbleVjC458+ii9hJMgp1lmnwwY2Jlo9+X5XimkmZd0pi4+iuEyhmC85AT2xLdru/NnpoDoz0u4cZoucIpyo4NjJqx3tkExH5BrnBLi4973j5MbnhJX3pIzptcYEVy7uEYhQfk+VVcOB//NZRHWNjLOOz72yZ1UN6eLyCz88Z6zcHWR9H3c1EyGTWLkAAAAA=="
   },
   "collage-stem": {
     "width": 1600,
@@ -125,14 +125,14 @@
   },
   "curriculum": {
     "width": 1600,
-    "height": 1067,
+    "height": 1240,
     "widths": [
       480,
       800,
       1200,
       1600
     ],
-    "blur": "data:image/webp;base64,UklGRsQAAABXRUJQVlA4ILgAAACQBACdASoYABAAPu1iqU2ppaOiMAgBMB2JZgCdIFzgthYliTAvBHdLmIH7NmAA/u/aLmaNnibEihtNd5PhwgB4Si9AZO6P4m90Y8wOhtEC9W5JAbsbm1DbUzD88/BXpJAtVBCdKkQEPUTNbVAaSkkb1RW6f+rFN07bUc85zGOMJWONn9AI/moK4gapIw1ZSNz6YQkKq0NmdT5/6DaOQkJg07unABdVPhyIsVkAh1YyXjTalu+OuAAA"
+    "blur": "data:image/webp;base64,UklGRgwBAABXRUJQVlA4IAABAAAwBgCdASoYABMAPu1usFIppiSiqAgBMB2JZgCdMoMw/TASqdvVH/SnQ3f4CyfzYc+eGrHSD9dFatT4AP7tY5pSKlrisMLcQaKye+zPPDh+VfV+Fg1YFFWWXzdCuloQvC5ugD7GVuSSgG9HKcmNffO5O671PdFWx4QCpUF6BW8l+zxk3iAqhohVV5cFDzt7mrqI4Do4kFyiOaBiFtw/MQJo8P40MFHd+XFyN5P7rEn8H/lLOcwtRimisP1ARy/w91yQChn8ooNywZrEAYlKUfXGtPHefgnOKcNoSjZYgSIktozDRz5j/1ERzZ71zwa+WIx8O7E8Pji6bvT7sacYUAAA"
   },
   "facility-classroom": {
     "width": 1600,
@@ -256,12 +256,15 @@
     "blur": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAABQBACdASoYABAAPu1iqU2ppaOiMAgBMB2JagCdACIQLCe9yTNVXBgjjJywAOJ4Q4h34VwySRMIDQGtqtJRzxwugQWTqjT/mz4gXeYaef3Ys0K523P9OdSLYt0/5RmuaWxfYIeiX5vHWh7zfxgAakF2sTB5wmLvFDnOFJG+EaI0wdyKnEg4EAAA"
   },
   "sit-in": {
-    "width": 281,
-    "height": 268,
+    "width": 1600,
+    "height": 1211,
     "widths": [
-      281
+      480,
+      800,
+      1200,
+      1600
     ],
-    "blur": "data:image/webp;base64,UklGRuYAAABXRUJQVlA4INoAAADwBQCdASoYABcAPtlepE2oJaOiN/qoAQAbCUAXYAPEFkwCLhMGbNVuA4owffC5JbtFm6P3gcEkAAD+U/KiUpvCyioVrDLqFqfKyEZeOc44RQcKl5sgLFMv+u2GEXprLibpACnk8nlV2J1EXZqIXRrrWJ/LJtzGRAv6lGTSxPPMwaWF9kyV2/cHeEbfkvG0OgHaiV1srGVXIP2Mrm92k6RY8u8lzfOtnyFa2XX9xkkt7rrjg3IyTKBup8lGT+jzbypUh4JW8hi9+z9+A/1KK7hEgzC70ckV/4AAAA=="
+    "blur": "data:image/webp;base64,UklGRtgAAABXRUJQVlA4IMwAAACQBQCdASoYABIAPu1kq06ppaQiKA1RMB2JYgCdMtVAIEABpqONCjhBWVflqu1hz40m1SY80AD+jOjrat4De/Ga+WL9Jdcp1qY+klUuNE30dMadyQdR2VNHqqVJTAeGIaRcv2ji2+cOLAZa79O9d9eibISocy6B3as4ca/d1AeA63hOiUyRFu++uCPq3oI8qh8wKNGblBwY8zmC5cIrPZdT2ZyodcobdmF4Z6zVrgMkNSDYl9mynKbChCmST2QAjANUN7gI4KBeW+DwAAA="
   },
   "testimonial-1": {
     "width": 720,
